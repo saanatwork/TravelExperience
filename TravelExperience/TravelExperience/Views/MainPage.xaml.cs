@@ -18,13 +18,15 @@ namespace TravelExperience.Views
             InitializeComponent();
             menulist = new List<MasterPageItem>();
 
-            var historicalplacespage = new MasterPageItem() { Icon = "", Title = "Historycal Places", TargetType = typeof(HistoricalPlacesPage) };
-            var hotelspage = new MasterPageItem() { Icon = "", Title = "Hotels", TargetType = typeof(HotelsPage) };
-            var restaurantspage = new MasterPageItem() { Icon = "", Title = "Restaurants", TargetType = typeof(RestaurantsPage) };
+            var historicalplacespage = new MasterPageItem() { Icon = "FlowerIcon", Title = "Historical Places", TargetType = typeof(HistoricalPlacesPage) };
+            var hotelspage = new MasterPageItem() { Icon = "HotelIcon", Title = "Hotels", TargetType = typeof(HotelsPage) };
+            var restaurantspage = new MasterPageItem() { Icon = "RestaurantsIcon", Title = "Restaurants", TargetType = typeof(RestaurantsPage) };
+            var othervenuepage = new MasterPageItem() { Icon = "OthervenueIcon", Title = "Other Venues", TargetType = typeof(OtherVenuesPage) };
 
             menulist.Add(historicalplacespage);
             menulist.Add(hotelspage);
             menulist.Add(restaurantspage);
+            menulist.Add(othervenuepage);
 
             navigationDrawerList.ItemsSource = menulist;
 
@@ -32,9 +34,9 @@ namespace TravelExperience.Views
             this.BindingContext = new
             {
                 Header = "",
-                Image = "http://www3.hilton.com/resources/media/hi/GSPSCHF/en_US/img/shared/full_page_image_gallery/main/HH_food_22_675x359_FitToBoxSmallDimension_Center.jpg",
+                Image = "https://rinnovationlab.com/wp-content/uploads/2020/03/Lingaraj-2.jpg",
                 //Footer = "         -------- Welcome To HotelPlaza --------           "
-                Footer = "Welcome To Hotel Plaza"
+                Footer = "Explore New Odisha"
             };
         }
 

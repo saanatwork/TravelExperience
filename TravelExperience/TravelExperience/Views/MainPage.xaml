@@ -13,8 +13,11 @@
                 <StackLayout>
                     <Label Text="{Binding Header}" />
                     <Image Source="{Binding Image}" 
-                           Aspect="Fill" />
-                    <Label Text="{Binding Footer}" />
+                           Aspect="Fill"
+                           HeightRequest="200"/>
+                    <Label Text="{Binding Footer}"
+                           Style="{StaticResource HeadingCenterLabel}"
+                           Padding="0,20"/>
                 </StackLayout>
                 <ListView x:Name="navigationDrawerList"
                           RowHeight="55"
@@ -31,10 +34,12 @@
                                     <Image Source="{Binding Icon}"
                                            WidthRequest="40"
                                            HeightRequest="40"
-                                           VerticalOptions="Start" />
+                                           VerticalOptions="Start"
+                                           HorizontalOptions="Center"/>
                                     <Label Text="{Binding Title}"
-                                           FontSize="Small"
-                                           VerticalOptions="End"
+                                           FontSize="Medium"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
                                            TextColor="Black"/>    
                                 </StackLayout>
                             </ViewCell>

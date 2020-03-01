@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TravelExperience
+namespace TravelExperience.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
+    public partial class HotelsPage : ContentPage
     {
-        public Page1()
+        public HotelsPage()
         {
             InitializeComponent();
         }

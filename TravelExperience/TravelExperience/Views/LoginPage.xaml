@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TravelExperience.Views.LoginPage">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Source="LoginBanner.png"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="StartAndExpand"
+                   Grid.Row="0"/>
+            <Frame CornerRadius="20"
+                   Margin="20,100,20,10"
+                   Grid.RowSpan="2" HasShadow="True"
+                   BackgroundColor="{StaticResource LightGrayColor}">
+                <Grid RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="LOG IN"
+                           Style="{StaticResource HeadingCenterLabel}"
+                           Grid.Row="0"/>
+                    <BoxView HorizontalOptions="FillAndExpand"
+                             Grid.Row="2"
+                             HeightRequest="1"
+                             BackgroundColor="{StaticResource PrimaryColor}"/>
+                    <StackLayout Grid.Row="3"
+                                 Margin="10,30,10,0">
+                        <Label Text="Email ID"/>
+                        <Entry x:Name="EmailIDEntry"
+                               Placeholder="Enter your registered Email ID."
+                               TextColor="{StaticResource PrimaryColor}"
+                               Margin="10,-10,10,20" Keyboard="Email"/>
+                        <Label Text="Password"/>
+                        <Entry x:Name="PasswordEntry"
+                               Placeholder="Enter your registered Email ID."
+                               TextColor="{StaticResource PrimaryColor}"
+                               Margin="10,-10,10,20" IsPassword="True"/>
+                        <Button x:Name="LogInButton"
+                                Text="Log in"
+                               Style="{StaticResource PrimaryButtonRoundedCorner}"
+                                Margin="10"/>
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="End"
+                                     Margin="10,20">
+                            <Label Text="NEW USER ?"
+                                   
+                                   VerticalOptions="Center"/>
+                            <Button Text="Register Here"
+                                    Style="{StaticResource SecondaryButtonRoundedCorner}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Label Text=" "
+                           Style="{StaticResource HeadingCenterLabel}"
+                           Grid.Row="4"/>
+                    <BoxView HorizontalOptions="FillAndExpand"
+                             Grid.Row="5"
+                             HeightRequest="1"
+                             BackgroundColor="{StaticResource PrimaryColor}"/>
+                    <StackLayout Grid.Row="6"
+                                 Orientation="Horizontal"
+                                 HorizontalOptions="CenterAndExpand"
+                                     Margin="10,20">
+                        <ImageButton x:Name="FBLoginButton" 
+                                     Source="FBLogin.png"
+                                     Clicked="FBLoginButton_Clicked"/>
+                        <ImageButton x:Name="GoogleLoginButton" 
+                                     Source="GoogleLogin.png"
+                                     Clicked="GoogleLoginButton_Clicked"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>

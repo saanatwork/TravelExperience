@@ -6,12 +6,12 @@
              mc:Ignorable="d"
              xmlns:views="clr-namespace:TravelExperience.Views"
              x:Class="TravelExperience.Views.MainPage">
+    
     <MasterDetailPage.Master>
         <ContentPage Title="Menu"
                      BackgroundColor="#e8e8e8">
             <StackLayout Orientation="Vertical" Margin="0">
                 <StackLayout>
-                    
                     <Image Source="{Binding Image}" 
                            Aspect="Fill"
                            HeightRequest="200"/>
@@ -52,7 +52,7 @@
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
         <NavigationPage>
-           
+            
         </NavigationPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>

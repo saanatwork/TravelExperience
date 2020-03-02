@@ -29,8 +29,8 @@ namespace TravelExperience.Views
             menulist.Add(othervenuepage);
 
             navigationDrawerList.ItemsSource = menulist;
-
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(MainViewPage)));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(LandingPage)));
+            //Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(MainViewPage)));
             this.BindingContext = new
             {
                 Header = "",

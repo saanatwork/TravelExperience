@@ -4,12 +4,66 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+              xmlns:vm="clr-namespace:TravelExperience.ViewModels"
+             xmlns:behaviors="clr-namespace:TravelExperience.Views.Behaviors"
              x:Class="TravelExperience.Views.RestaurantsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="HomeButton"
+                     IconImageSource="HomeIcon.png"
+                     Clicked="HomeButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:RestaurantsVM x:Key="vm"/>
+            <Style TargetType="Label" x:Key="smallTitleLabel">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="{StaticResource darkColor}"/>
+            </Style>
+            <Style TargetType="Label" x:Key="normalLabel">
+                <Setter Property="TextColor" Value="{StaticResource darkGrayColor}"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to RestaurantsPage!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Best Restaurants in Odisha"
+                   Style="{StaticResource HeadingCenterLabel}"
+                   Margin="20"/>
+            <ListView BindingContext="{StaticResource vm}"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="true"
+                  ItemsSource="{Binding Blog.Channel.Items}"
+                      >
+                <ListView.Behaviors>
+                    <behaviors:ListViewBehavior/>
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="10"
+                               Padding="10"
+                               Margin="10"
+                               HasShadow="True">
+                                <StackLayout>
+                                    <Image Source="{Binding Descimg}"
+                                       HeightRequest="200"
+                                       Aspect="AspectFill"/>
+                                    <Label Text="{Binding Title}"
+                                       Margin="20,0"
+                                       Style="{StaticResource smallTitleLabel}"/>
+                                    <Label Text="{Binding Creator, StringFormat='Posted By : {0:N}'}"
+                                       Margin="20,0,20,10"
+                                       Style="{StaticResource normalLabel}"/>
+
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

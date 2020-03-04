@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              xmlns:views="clr-namespace:TravelExperience.Views"
              x:Class="TravelExperience.Views.MainPage">
-    
+   
     <MasterDetailPage.Master>
         <ContentPage Title="Menu"
                      BackgroundColor="#e8e8e8">

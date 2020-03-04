@@ -5,12 +5,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TravelExperience.Views.LandingPage">
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem x:Name="LoginButton"
                      Text="LOG IN"
                      IconImageSource="ic_login.png"
                      Clicked="LoginButton_Clicked"/>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
     <ScrollView BackgroundColor="{StaticResource LightGrayColor}">
         <Grid>
             <Grid.RowDefinitions>
@@ -89,10 +89,12 @@
                             <Label Text="Baripada, Odisha"/>
                         </StackLayout>
                     </Frame>
-                    <Button Grid.Row="6"
+                    <Button x:Name="ShowMore" 
+                            Grid.Row="6"
                             CornerRadius="30"
                             Style="{StaticResource PrimaryButton}"
-                            Text="Explore More"/>
+                            Text="Explore More"
+                            Clicked="ShowMore_Clicked"/>
                 </Grid>                            
             </Frame>
             

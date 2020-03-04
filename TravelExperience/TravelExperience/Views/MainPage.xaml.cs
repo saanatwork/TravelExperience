@@ -18,12 +18,12 @@ namespace TravelExperience.Views
             InitializeComponent();
             menulist = new List<MasterPageItem>();
 
-            var historicalplacespage = new MasterPageItem() { Icon = "FlowerIcon", Title = "Historical Places", TargetType = typeof(HistoricalPlacesPage) };
+            //var historicalplacespage = new MasterPageItem() { Icon = "FlowerIcon", Title = "Historical Places", TargetType = typeof(HistoricalPlacesPage) };
             var hotelspage = new MasterPageItem() { Icon = "HotelIcon", Title = "Hotels", TargetType = typeof(HotelsPage) };
             var restaurantspage = new MasterPageItem() { Icon = "RestaurantsIcon", Title = "Restaurants", TargetType = typeof(RestaurantsPage) };
             var othervenuepage = new MasterPageItem() { Icon = "OthervenueIcon", Title = "Other Venues", TargetType = typeof(OtherVenuesPage) };
 
-            menulist.Add(historicalplacespage);
+            //menulist.Add(historicalplacespage);
             menulist.Add(hotelspage);
             menulist.Add(restaurantspage);
             menulist.Add(othervenuepage);
@@ -45,7 +45,10 @@ namespace TravelExperience.Views
             var item = (MasterPageItem)e.SelectedItem;
             Type page = item.TargetType;
             Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+            //Detail = (Page)Activator.CreateInstance(page);
             IsPresented = false;
         }
+
+        
     }
 }

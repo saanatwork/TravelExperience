@@ -16,5 +16,14 @@ namespace TravelExperience.Views
         {
             InitializeComponent();
         }
+        private void HomeButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
+        }
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            Application.Current.MainPage = new MainPage();
+        }
     }
 }

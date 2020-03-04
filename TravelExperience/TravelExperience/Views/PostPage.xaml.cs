@@ -23,5 +23,10 @@ namespace TravelExperience.Views
 
             DetailswebView.Source = item.ItemLink;
         }
+        //protected override void OnDisappearing()
+        //{
+        //    base.OnDisappearing();
+        //    Application.Current.MainPage = new MainPage();
+        //}
     }
 }

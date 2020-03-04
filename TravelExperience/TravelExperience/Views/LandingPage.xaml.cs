@@ -15,11 +15,16 @@ namespace TravelExperience.Views
         public LandingPage()
         {
             InitializeComponent();
+            
         }
 
-        private void LoginButton_Clicked(object sender, EventArgs e)
+        
+        private void ShowMore_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LoginPage());
+            //await((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new MainViewPage());
+            //Application.Current.MainPage.Navigation.PushAsync(new MainViewPage());
+            Navigation.PushAsync(new MainViewPage());
+            //await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new MainViewPage(1, 1));
         }
     }
 }
